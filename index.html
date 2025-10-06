@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Arthur Guerra — Graphics Programmer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Description & social -->
+  <meta name="description" content="Computer Science & Engineering student focusing on computer graphics, geometry processing, real-time rendering, and GPU programming." />
+  <meta property="og:title" content="Arthur Guerra — Graphics Programmer" />
+  <meta property="og:description" content="Computer Science & Engineering student focusing on computer graphics, geometry processing, real-time rendering, and GPU programming." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:site_name" content="Arthur Guerra's Portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.orange.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css" />
+
+  <link rel="stylesheet" href="css/index.css" />
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+</head>
+<body>
+
+  <div id="navigation" class="container-fluid pico-background-slate-900" style="position: sticky; top: 0px; z-index: 10;">
+    <nav class="container">
+      <ul>
+        <li><a id="brand" href="#"><strong id="brandText">Arthur Guerra</strong></a></li>
+      </ul>
+      <ul>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="assets/ArthurCarvalhoGuerra.pdf" download>CV</a></li>
+        <li><a href="mailto:conta.arthurguerra@gmail.com" class="contrast">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+
+    <header id="top" role="banner" class="container">
+      <article>
+        <h1>Arthur Guerra · <small class="secondary"><i>Graphics Programmer</i></small></h1>
+        <hr />
+        <p>
+          I focus on computer graphics, with a special interest on <strong>geometry processing, real-time rendering, and simulation</strong>.
+          I enjoy low-level work (C++/GL/GLSL) and turning complex techniques into clean, visually compelling results.
+        </p>
+
+        <div role="group">
+          <a href="work.html" role="button">See selected work</a>
+          <a href="assets/ArthurCarvalhoGuerra.pdf" role="button" class="outline">Download CV</a>
+        </div>
+
+        <!-- Scrolling technologies banner -->
+        <section aria-label="Technologies" class="container">
+          <div class="tech-marquee" aria-hidden="false">
+            <ul class="tech-track">
+              <li>C++</li>
+              <li>C</li>
+              <li>OpenGL</li>
+              <li>GLSL</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>NodeJS</li>
+              <li>WebGPU</li>
+              <li>Python</li>
+              <li>OpenCV</li>
+              <li>Rust</li>
+              <li>C#</li>
+
+              <!-- DUPLICATE for seamless loop -->
+              <li aria-hidden="true">C++</li>
+              <li aria-hidden="true">C</li>
+              <li aria-hidden="true">OpenGL</li>
+              <li aria-hidden="true">GLSL</li>
+              <li aria-hidden="true">JavaScript</li>
+              <li aria-hidden="true">TypeScript</li>
+              <li aria-hidden="true">React</li>
+              <li aria-hidden="true">NodeJS</li>
+              <li aria-hidden="true">WebGPU</li>
+              <li aria-hidden="true">Python</li>
+              <li aria-hidden="true">OpenCV</li>
+              <li aria-hidden="true">Rust</li>
+              <li aria-hidden="true">C#</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </header>
+
+    <!-- Selected work teaser (link out to /work) -->
+    <section class="container">
+      <h2>Selected Work</h2>
+      <p>A few projects I’m proud of. More details on the <a href="work.html">work page</a>.</p>
+
+      <div id="projects" class="grid">
+        <article>
+          <header>
+            <h3><a href="https://github.com/artguerra/reaction-diffusion">Reaction-Diffusion model simulation</a></h3>
+            <img src="assets/thumbs/rd.png" alt="Reaction-diffusion patterns" />
+            <p>Real-time Gray–Scott reaction–diffusion in OpenGL. CPU finite-difference and GPU fragment-shader ping-pong, built for side-by-side performance comparison.</p>
+          </header>
+          <footer>
+            <small>Framebuffers · GPU Compute · C++/OpenGL/GLSL</small>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3><a href="https://github.com/artguerra/depixelization">Spring-based pixel-art vectorizer</a></h3>
+            <img src="assets/thumbs/dpx.png" alt="Result of an interactive depixelization through spring simulation" />
+            <p>Depixelization of pixel art through spring simulation. Implementation of the paper "Interactive Depixelization of Pixel Art through Spring Simulation".</p>
+          </header>
+          <footer>
+            <small>Spring simulation · Bezier fitting · Pixel clustering · C++/OpenGL/GLSL</small>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3><a href="https://github.com/artguerra/interactive-invigoration">Procedural strand-based tree modeling</a></h3>
+            <img src="assets/thumbs/tree.png" alt="Procedural tree generated by the algorithm" />
+            <p>A procedural tree modeling framework using strand-based volumetric geometry. Implementation of the paper "Interactive Invigoration: Volumetric Modeling of Trees with Strands".</p>
+          </header>
+          <footer>
+            <small>C++ · OpenGL · Profiling</small>
+          </footer>
+        </article>
+      </div>
+
+      <p><a href="work.html">Browse more projects →</a></p>
+    </section>
+
+    <!-- About / short bio -->
+    <section id="about" class="container">
+      <h2>About</h2>
+      <div class="grid">
+        <article>
+          <p>
+            I’m a <strong>Computer Science & Engineering</strong> student focused on computer graphics—mainly geometry processing, real-time rendering, and simulation. I’m also interested in computer vision and sometimes use it alongside my graphics work.
+            <br /><br />
+            Day to day, I use mainly C++/OpenGL/GLSL to make projects and prototypes. I prioritize practical performance and simple, usable tools.
+          </p>
+          <p>
+            <strong>Some interests:</strong> procedural generation, geometry modeling & processing, real-time rendering, simulation.
+          </p>
+          <p>Currently open to internships and collaborations in France!</p>
+        </article>
+        <aside>
+          <ul>
+            <li><strong>Location:</strong> Massy, France</li>
+            <li><strong>Email:</strong> <a href="mailto:conta.arthurguerra@gmail.com">conta.arthurguerra@gmail.com</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/artguerra">@artguerra</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arthurcg/">/in/arthurcg</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <small>
+      © <span id="year"></span> Arthur Carvalho Guerra. 
+      <a href="work.html">Work</a> · <a href="#about">About</a> · <a href="mailto:conta.arthurguerra@gmail.com">Contact</a>
+    </small>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
+

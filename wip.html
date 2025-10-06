@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Arthur Guerra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.orange.min.css" />
+
+  <style>
+    main {
+      min-height: 70vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+    .muted { color: var(--pico-muted-color); }
+  </style>
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><a href="javascript:history.back()"><strong>Go back</strong></a></li>
+      </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article>
+      <header>
+        <h1>🚧 Work in progress</h1>
+        <p class="muted">This page isn’t ready yet — please check back soon.</p>
+      </header>
+      <p>
+        Meanwhile, you can visit the <a href="index.html">home page</a> or see my
+        <a href="work.html">projects</a>.
+      </p>
+    </article>
+  </main>
+
+  <footer class="container">
+    <small class="muted">© <span id="y"></span> Arthur Guerra</small>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
