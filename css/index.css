@@ -1,46 +1,63 @@
-.tech-marquee{
-  --speed: 20s;               /* adjust speed */
-  --gap: .9rem;               /* space around separators */
-  position: relative;
-  overflow: hidden;
-  mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+#navigation {
+  background-color: var(--pico-background-color);
 }
 
-.tech-track{
+.tech-marquee{
+  --speed: 40s;
+  --gap: .9rem;
+  position: relative;
+  overflow: hidden;
   display: flex;
+  flex-direction: row;
+  mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+
+}
+
+.tech-row{
+  display: inline-flex;
   align-items: center;
   gap: var(--gap);
   white-space: nowrap;
-  padding: .25rem 0;
+  padding: 0;
   margin: 0;
   list-style: none;
-  animation: tech-scroll var(--speed) linear infinite;
+  animation: marquee-slide var(--speed) linear infinite;
 }
 
-.tech-marquee:hover .tech-track,
-.tech-marquee:focus-within .tech-track{
-  animation-play-state: paused;
+.tech-row li{
+  display: inline;
+  opacity: 0.9;
 }
 
-.tech-track > li{
-  display: inline-block;
-  opacity: .9;
-}
-.tech-track > li + li::before{
+.tech-row li::before{
   content: "·";
   opacity: .5;
   margin: 0 var(--gap);
 }
 
-@keyframes tech-scroll{
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+.tech-row:nth-child(2){
+  animation-name: marquee-slide-2;
+}
+
+.tech-marquee:hover .tech-row,
+.tech-marquee:focus-within .tech-row{
+  animation-play-state: paused;
+}
+
+@keyframes marquee-slide{
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-100%); }
+}
+@keyframes marquee-slide-2{
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-100%); }
 }
 
 @media (prefers-reduced-motion: reduce){
-  .tech-track{ animation: none; }
+  .tech-row{ animation: none; }
 }
+
 
 #brand { display: inline-block; min-width: 12ch; }
 #brandText { transition: opacity .25s ease; opacity: 1; }

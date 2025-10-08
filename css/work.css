@@ -1,3 +1,7 @@
+#navigation {
+  background-color: var(--pico-background-color);
+}
+
 #main-navigation nav li {
   padding-top: 0;
   padding-bottom: 0;

@@ -15,7 +15,6 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.orange.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css" />
 
   <link rel="stylesheet" href="css/index.css" />
 
@@ -24,16 +23,16 @@
 </head>
 <body>
 
-  <div id="navigation" class="container-fluid pico-background-slate-900" style="position: sticky; top: 0px; z-index: 10;">
+  <div id="navigation" class="container-fluid" style="position: sticky; top: 0px; z-index: 10;">
     <nav class="container">
       <ul>
         <li><a id="brand" href="#"><strong id="brandText">Arthur Guerra</strong></a></li>
       </ul>
       <ul>
         <li><a href="work.html">Work</a></li>
-        <li><a href="#about">About</a></li>
         <li><a href="assets/ArthurCarvalhoGuerra.pdf" download>CV</a></li>
-        <li><a href="mailto:conta.arthurguerra@gmail.com" class="contrast">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="contrast">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -55,37 +54,39 @@
         </div>
 
         <!-- Scrolling technologies banner -->
-        <section aria-label="Technologies" class="container">
+        <section aria-label="Technologies" class="container" style="margin-bottom: 0;">
           <div class="tech-marquee" aria-hidden="false">
-            <ul class="tech-track">
-              <li>C++</li>
+            <ul class="tech-row">
               <li>C</li>
+              <li>C++</li>
               <li>OpenGL</li>
               <li>GLSL</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>React</li>
-              <li>NodeJS</li>
               <li>WebGPU</li>
               <li>Python</li>
               <li>OpenCV</li>
               <li>Rust</li>
               <li>C#</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>NodeJS</li>
+            </ul>
 
+            <ul class="tech-row" aria-hidden="true">
               <!-- DUPLICATE for seamless loop -->
-              <li aria-hidden="true">C++</li>
               <li aria-hidden="true">C</li>
+              <li aria-hidden="true">C++</li>
               <li aria-hidden="true">OpenGL</li>
               <li aria-hidden="true">GLSL</li>
-              <li aria-hidden="true">JavaScript</li>
-              <li aria-hidden="true">TypeScript</li>
-              <li aria-hidden="true">React</li>
-              <li aria-hidden="true">NodeJS</li>
               <li aria-hidden="true">WebGPU</li>
               <li aria-hidden="true">Python</li>
               <li aria-hidden="true">OpenCV</li>
               <li aria-hidden="true">Rust</li>
               <li aria-hidden="true">C#</li>
+              <li aria-hidden="true">JavaScript</li>
+              <li aria-hidden="true">TypeScript</li>
+              <li aria-hidden="true">React</li>
+              <li aria-hidden="true">NodeJS</li>
             </ul>
           </div>
         </section>
@@ -150,7 +151,7 @@
           </p>
           <p>Currently open to internships and collaborations in France!</p>
         </article>
-        <aside>
+        <aside id="contact">
           <ul>
             <li><strong>Location:</strong> Massy, France</li>
             <li><strong>Email:</strong> <a href="mailto:conta.arthurguerra@gmail.com">conta.arthurguerra@gmail.com</a></li>
