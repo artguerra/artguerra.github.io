@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <title>Arthur Guerra — Graphics Programmer</title>
@@ -14,16 +14,18 @@
   <meta property="og:site_name" content="Arthur Guerra's Portfolio" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.orange.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
 
   <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <script src="js/theme.js"></script>
 
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 </head>
 <body>
 
-  <div id="navigation" class="container-fluid" style="position: sticky; top: 0px; z-index: 10;">
+  <div id="navigation" class="container-fluid">
     <nav class="container">
       <ul>
         <li><a id="brand" href="#"><strong id="brandText">Arthur Guerra</strong></a></li>
@@ -32,7 +34,14 @@
         <li><a href="work.html">Work</a></li>
         <li><a href="assets/ArthurCarvalhoGuerra.pdf" download>CV</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#contact" class="contrast">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-switcher" type="button" data-theme-switcher aria-label="Switch to dark mode">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 18h6M10 22h4M9 14h6M15.1 14c.2-.7.7-1.3 1.2-1.8a6 6 0 1 0-8.6 0c.5.5 1 1.1 1.2 1.8" />
+            </svg>
+          </button>
+        </li>
       </ul>
     </nav>
   </div>
@@ -44,8 +53,8 @@
         <h1>Arthur Guerra · <small class="secondary"><i>Graphics Programmer</i></small></h1>
         <hr />
         <p>
-          I focus on computer graphics, with a special interest on <strong>real-time rendering, geometry processing, and simulation</strong>.
-          I enjoy low-level work (C++/GL/GLSL and also Rust/WGSL) and turning complex techniques into clean, visually compelling results.
+          I focus on computer graphics, with a special interest on <strong>image synthesis, geometry processing and real-time rendering</strong>.
+          I enjoy low-level work (C++/GL/GLSL, WebGPU/WGSL and also Rust/WGSL) and turning complex techniques into clean, visually compelling results.
         </p>
 
         <div role="group">
@@ -54,8 +63,8 @@
         </div>
 
         <!-- Scrolling technologies banner -->
-        <section aria-label="Technologies" class="container" style="margin-bottom: 0;">
-          <div class="tech-marquee" aria-hidden="false">
+        <section aria-label="Technologies" class="container tech-section">
+          <div class="tech-marquee">
             <ul class="tech-row">
               <li>C</li>
               <li>C++</li>
@@ -74,20 +83,19 @@
             </ul>
 
             <ul class="tech-row" aria-hidden="true">
-              <!-- DUPLICATE for seamless loop -->
-              <li aria-hidden="true">C</li>
-              <li aria-hidden="true">C++</li>
-              <li aria-hidden="true">OpenGL</li>
-              <li aria-hidden="true">GLSL</li>
-              <li aria-hidden="true">WebGPU</li>
-              <li aria-hidden="true">Python</li>
-              <li aria-hidden="true">OpenCV</li>
-              <li aria-hidden="true">Rust</li>
-              <li aria-hidden="true">C#</li>
-              <li aria-hidden="true">JavaScript</li>
-              <li aria-hidden="true">TypeScript</li>
-              <li aria-hidden="true">React</li>
-              <li aria-hidden="true">NodeJS</li>
+              <li>C</li>
+              <li>C++</li>
+              <li>OpenGL</li>
+              <li>GLSL</li>
+              <li>WebGPU</li>
+              <li>Python</li>
+              <li>OpenCV</li>
+              <li>Rust</li>
+              <li>C#</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>NodeJS</li>
             </ul>
           </div>
         </section>
@@ -113,23 +121,23 @@
 
         <article>
           <header>
+            <h3><a href="https://artguerra.com/heat-geodesics" target="_blank">Geodesic distance via the heat method</a></h3>
+            <img src="assets/thumbs/heat-geodesics.jpeg" alt="Geodesic distance field computed on a triangle mesh using the heat method" />
+            <p>An interactive implementation of Crane et al.'s heat method for computing geodesic distance fields on triangle meshes.</p>
+          </header>
+          <footer>
+            <small>Geometry Processing · Heat Method · C++ · WebAssembly</small>
+          </footer>
+        </article>
+
+        <article>
+          <header>
             <h3><a href="https://artguerra.com/wave-function-collapse" target="_blank">Wave Function Collapse</a></h3>
             <img src="assets/thumbs/wfc.png" alt="Flowers pixel art generated by WFC" />
             <p>Wave Function Collapse solver made with WebGPU, featuring multiple control parameters to experiment with the capabilities of the algorithm.</p>
           </header>
           <footer>
             <small>WFC · Procedural Modeling · WebGPU · WGSL</small>
-          </footer>
-        </article>
-
-        <article>
-          <header>
-            <h3><a href="https://github.com/artguerra/depixelization" target="_blank">Spring-based pixel-art vectorizer</a></h3>
-            <img src="assets/thumbs/dpx.png" alt="Result of an interactive depixelization through spring simulation" />
-            <p>Depixelization of pixel art through spring simulation. Implementation of the paper "Interactive Depixelization of Pixel Art through Spring Simulation".</p>
-          </header>
-          <footer>
-            <small>Spring simulation · Bezier fitting · Pixel clustering · C++/OpenGL/GLSL</small>
           </footer>
         </article>
       </div>
@@ -143,19 +151,21 @@
       <div class="grid">
         <article>
           <p>
-            I’m a <strong>Computer Science & Engineering</strong> student focused on computer graphics—mainly real-time rendering, geometry processing, and simulation. I’m also interested in computer vision and sometimes use it alongside my graphics work.
+            I’m a <strong>Computer Science & Engineering</strong> student focused on computer graphics (some topics below!). I’m also interested in computer vision and sometimes use it alongside my graphics work.
             <br /><br />
-            Day to day, I use mainly TS/WGSL and C++/OpenGL/GLSL to make projects and prototypes. I prioritize practical performance and simple, usable tools.
+            Day to day, I use mainly TS/WGSL and C++/OpenGL/GLSL to make projects and prototypes. I prefer simple and usable tools which still offer me a lot of control. I really like supporting open-source projects, so I prioritize these as well.
           </p>
+
           <p>
-            <strong>Some interests:</strong> real-time rendering,  geometry modeling & processing, simulation, computer animation, procedural generation.
+            <strong>Some interests:</strong> image synthesis (rendering), geometry processing & modeling, real-time rendering, simulation, procedural generation.
           </p>
-          <p>Currently in internship at Adobe Research and looking for PhD opportunities!</p>
+
+          <p>Just finished an internship at Adobe Research (Paris) and my Master's degree; currently looking for PhD opportunities!</p>
         </article>
         <aside id="contact">
           <ul>
-            <li><strong>Location:</strong> Massy, France</li>
-            <li><strong>Email:</strong> <a href="mailto:conta.arthurguerra@gmail.com">conta.arthurguerra@gmail.com</a></li>
+            <li><strong>Location:</strong> Paris, France & Belo Horizonte, Brazil</li>
+            <li><strong>Email:</strong> conta (dot) arthurguerra (at) gmail (dot) com</li>
             <li><strong>GitHub:</strong> <a href="https://github.com/artguerra">@artguerra</a></li>
             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arthurcg/">/in/arthurcg</a></li>
           </ul>
@@ -168,11 +178,10 @@
   <footer class="container">
     <small>
       © <span id="year"></span> Arthur Carvalho Guerra. 
-      <a href="work.html">Work</a> · <a href="#about">About</a> · <a href="mailto:conta.arthurguerra@gmail.com">Contact</a>
+      <a href="work.html">Work</a> · <a href="#about">About</a> · <a href="#contact">Contact</a>
     </small>
   </footer>
 
   <script src="js/index.js"></script>
 </body>
 </html>
-

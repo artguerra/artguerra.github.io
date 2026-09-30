@@ -1,24 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <title>Work — Arthur Guerra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Selected projects by Arthur Guerra — graphics programming, geometry processing, rendering, and simulation." />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.orange.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
 
   <link rel="stylesheet" href="css/work.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <script src="js/theme.js"></script>
 
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
-  <style>
-  </style>
 </head>
 <body>
 
-  <div id="navigation" class="container-fluid" style="position: sticky; top: 0; z-index: 10;">
+  <div id="navigation" class="container-fluid">
     <nav id="main-navigation" class="container">
       <ul>
         <li>
@@ -33,7 +33,14 @@
       <ul>
         <li><a href="assets/ArthurCarvalhoGuerra.pdf" download>CV</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="mailto:conta.arthurguerra@gmail.com" class="contrast">Contact</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <button class="theme-switcher" type="button" data-theme-switcher aria-label="Switch to dark mode">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 18h6M10 22h4M9 14h6M15.1 14c.2-.7.7-1.3 1.2-1.8a6 6 0 1 0-8.6 0c.5.5 1 1.1 1.2 1.8" />
+            </svg>
+          </button>
+        </li>
       </ul>
     </nav>
   </div>
@@ -67,6 +74,17 @@
           </header>
           <footer>
             <small>WFC · Procedural Modeling · WebGPU · WGSL</small>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3><a href="https://artguerra.com/heat-geodesics" target="_blank">Geodesic distance via the heat method</a></h3>
+            <img src="assets/thumbs/heat-geodesics.jpeg" alt="Geodesic distance field computed on a triangle mesh using the heat method" />
+            <p>An interactive implementation of Crane et al.'s heat method for computing geodesic distance fields on triangle meshes, developed as coursework for Digital Analysis and Representation of Shapes.</p>
+          </header>
+          <footer>
+            <small>Geometry Processing · Heat Method · C++ · WebAssembly</small>
           </footer>
         </article>
 

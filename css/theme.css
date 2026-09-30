@@ -1,0 +1,293 @@
+:root[data-theme="light"],
+:root[data-theme="dark"] {
+  --pico-font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --pico-line-height: 1.65;
+
+  --pico-primary: var(--accent);
+  --pico-primary-background: var(--accent);
+  --pico-primary-border: var(--accent);
+  --pico-primary-underline: var(--accent-underline);
+  --pico-primary-hover: var(--accent-hover);
+  --pico-primary-hover-background: var(--accent-hover);
+  --pico-primary-hover-border: var(--accent-hover);
+  --pico-primary-hover-underline: var(--accent-hover);
+  --pico-primary-focus: var(--accent-focus);
+  --pico-primary-inverse: var(--accent-inverse);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --accent: #356b65;
+  --accent-hover: #285650;
+  --accent-focus: rgba(53, 107, 101, 0.2);
+  --accent-underline: rgba(53, 107, 101, 0.35);
+  --accent-inverse: #ffffff;
+  --accent-glow: rgba(164, 194, 183, 0.14);
+  --navigation-background: rgba(247, 246, 241, 0.92);
+  --subtle-border: rgba(41, 54, 51, 0.09);
+  --article-shadow: rgba(35, 53, 48, 0.07);
+  --image-border: rgba(41, 54, 51, 0.08);
+  --selection-background: #cfe1da;
+  --selection-color: #1e2d2a;
+
+  --pico-background-color: #f7f6f1;
+  --pico-color: #293633;
+  --pico-h1-color: #1e2d2a;
+  --pico-h2-color: #243431;
+  --pico-h3-color: #2a3b37;
+  --pico-h4-color: #30423e;
+  --pico-muted-color: #66736f;
+  --pico-muted-border-color: #d9dfda;
+
+  --pico-secondary: #62706c;
+  --pico-secondary-background: #e6ebe7;
+  --pico-secondary-border: #d2d9d4;
+  --pico-secondary-hover: #475652;
+  --pico-secondary-hover-background: #dbe2dd;
+  --pico-secondary-hover-border: #c6d0c9;
+  --pico-secondary-focus: rgba(98, 112, 108, 0.18);
+  --pico-secondary-inverse: #273531;
+
+  --pico-contrast: #33413e;
+  --pico-contrast-background: #33413e;
+  --pico-contrast-border: #33413e;
+  --pico-contrast-hover: #202d2a;
+  --pico-contrast-hover-background: #202d2a;
+  --pico-contrast-hover-border: #202d2a;
+  --pico-contrast-focus: rgba(51, 65, 62, 0.18);
+  --pico-contrast-inverse: #ffffff;
+
+  --pico-card-background-color: #f0f2ed;
+  --pico-card-border-color: #d8ded8;
+  --pico-card-sectioning-background-color: #fffefa;
+  --pico-form-element-background-color: #fffefa;
+  --pico-form-element-border-color: #cbd3cd;
+  --pico-form-element-color: #293633;
+  --pico-form-element-placeholder-color: #7a8581;
+  --pico-table-border-color: #d9dfda;
+  --pico-code-background-color: #ecefe9;
+  --pico-code-color: #344b46;
+  --pico-blockquote-border-color: #9bb7ae;
+  --pico-blockquote-footer-color: #66736f;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --accent: #77bcb1;
+  --accent-hover: #97d0c7;
+  --accent-focus: rgba(119, 188, 177, 0.24);
+  --accent-underline: rgba(119, 188, 177, 0.42);
+  --accent-inverse: #10201d;
+  --accent-glow: rgba(84, 151, 141, 0.13);
+  --navigation-background: rgba(17, 26, 24, 0.92);
+  --subtle-border: rgba(177, 207, 198, 0.11);
+  --article-shadow: rgba(0, 0, 0, 0.2);
+  --image-border: rgba(188, 216, 208, 0.12);
+  --selection-background: #315c55;
+  --selection-color: #eff8f5;
+
+  --pico-background-color: #111a18;
+  --pico-color: #cbd8d4;
+  --pico-h1-color: #edf3f1;
+  --pico-h2-color: #e5efec;
+  --pico-h3-color: #dce9e5;
+  --pico-h4-color: #d2e2dd;
+  --pico-muted-color: #91a39e;
+  --pico-muted-border-color: #30413d;
+
+  --pico-secondary: #a7b7b2;
+  --pico-secondary-background: #263632;
+  --pico-secondary-border: #344843;
+  --pico-secondary-hover: #c3cfcb;
+  --pico-secondary-hover-background: #31443f;
+  --pico-secondary-hover-border: #405650;
+  --pico-secondary-focus: rgba(167, 183, 178, 0.2);
+  --pico-secondary-inverse: #f1f6f4;
+
+  --pico-contrast: #d5e1dd;
+  --pico-contrast-background: #d5e1dd;
+  --pico-contrast-border: #d5e1dd;
+  --pico-contrast-hover: #eef5f2;
+  --pico-contrast-hover-background: #eef5f2;
+  --pico-contrast-hover-border: #eef5f2;
+  --pico-contrast-focus: rgba(213, 225, 221, 0.2);
+  --pico-contrast-inverse: #16211e;
+
+  --pico-card-background-color: #1c2926;
+  --pico-card-border-color: #30413d;
+  --pico-card-sectioning-background-color: #17221f;
+  --pico-form-element-background-color: #17221f;
+  --pico-form-element-border-color: #40534e;
+  --pico-form-element-color: #d7e2de;
+  --pico-form-element-placeholder-color: #84958f;
+  --pico-table-border-color: #30413d;
+  --pico-code-background-color: #1d2b28;
+  --pico-code-color: #b8d7d0;
+  --pico-blockquote-border-color: #54887f;
+  --pico-blockquote-footer-color: #91a39e;
+}
+
+html {
+  background: var(--pico-background-color);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 100% 0%, var(--accent-glow), transparent 32rem),
+    var(--pico-background-color);
+  color: var(--pico-color);
+}
+
+body > main {
+  padding-top: clamp(1rem, 2.5vw, 2rem);
+}
+
+a {
+  text-underline-offset: 0.16em;
+  text-decoration-thickness: 0.08em;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+#navigation {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--navigation-background);
+  border-bottom: 1px solid var(--subtle-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+article {
+  background-color: var(--pico-card-background-color);
+  border: 1px solid var(--pico-card-border-color);
+  box-shadow: 0 0.3rem 1.4rem var(--article-shadow);
+}
+
+article > header,
+article > footer {
+  background-color: var(--pico-card-sectioning-background-color);
+  border-color: var(--pico-card-border-color);
+}
+
+nav .theme-switcher {
+  position: relative;
+  display: block;
+  width: 2rem;
+  min-width: 2rem;
+  max-width: 2rem;
+  inline-size: 2rem;
+  min-inline-size: 2rem;
+  max-inline-size: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  max-height: 2rem;
+  block-size: 2rem;
+  min-block-size: 2rem;
+  max-block-size: 2rem;
+  flex: 0 0 2rem;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--pico-primary);
+  box-shadow: none;
+  transition: background-color 150ms ease, border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.theme-switcher svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+  margin: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  transform: translate(-50%, -50%);
+}
+
+.theme-switcher:is(:hover, :focus-visible) {
+  border-color: var(--pico-primary);
+  background: var(--pico-primary-focus);
+  color: var(--pico-primary-hover);
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+:root[data-theme="dark"] .theme-switcher svg {
+  fill: var(--pico-primary-focus);
+}
+
+#projects article,
+#projects article > header {
+  display: flex;
+  flex-direction: column;
+}
+
+#projects article > header {
+  flex: 1;
+}
+
+#projects h3 {
+  display: -webkit-box;
+  min-height: 2lh;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  line-height: 1.25;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+#projects footer {
+  min-height: 3lh;
+  line-height: 1.25;
+}
+
+#projects img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid var(--image-border);
+  border-radius: calc(var(--pico-border-radius) * 0.75);
+}
+
+.secondary {
+  color: var(--pico-muted-color);
+}
+
+body > footer {
+  color: var(--pico-muted-color);
+}
+
+::selection {
+  background: var(--selection-background);
+  color: var(--selection-color);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  #navigation {
+    background-color: var(--pico-background-color);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
